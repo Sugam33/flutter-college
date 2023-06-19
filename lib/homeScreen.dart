@@ -34,7 +34,10 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          Text("Count value is: $count"),
+          Text(
+            "Count value is: $count",
+            style: const TextStyle(fontSize: 20),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
