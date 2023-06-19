@@ -13,6 +13,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int count = 0;
+  add() {
+    setState(() {
+      count++;
+    });
+  }
+
+  subtract() {
+    setState(() {
+      count--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     log(count.toString());
@@ -28,18 +40,12 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ElevatedButton(
                   onPressed: () {
-                    setState(() {
-                      count++;
-                    });
-                    log(count.toString());
+                    add();
                   },
                   child: Text("Add")), // add ko button ho yo
               ElevatedButton(
                   onPressed: () {
-                    setState(() {
-                      count--;
-                    });
-                    log(count.toString());
+                    subtract();
                   },
                   child: Text("Subtract"))
             ],
